@@ -6,6 +6,7 @@ import pickle
 import sklearn
 import streamlit.components.v1 as components
 import plotly.graph_objects as go
+import webbrowser
 
 st.session_state.fav_text = "Favourite\nclick predict"
 st.session_state.ud_text = "Underdog\nclick predict"
@@ -145,10 +146,10 @@ def update_graph(f1, f2):
 
 
 st.markdown("<h1 style='text-align: center; color: white; font-size: 80px;'>Strike Sense</h1>", unsafe_allow_html=True)
-st.title(
-    "Check out players stats [link](https://public.tableau.com/views/StrikeSense/StrikeSenceStatsOverView?:language"
-    "=en-US&publish=yes&:display_count=n&:origin=viz_share_link"
-    "&:display_count=n&:origin=viz_share_link)")
+# st.title(
+#     "Check out players stats [link](https://public.tableau.com/views/StrikeSense/StrikeSenceStatsOverView?:language"
+#     "=en-US&publish=yes&:display_count=n&:origin=viz_share_link"
+#     "&:display_count=n&:origin=viz_share_link)")
 st.markdown("""   <style>
    .stApp {
    background-image: url('https://girraphic.com/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-11.22.07-am.png');
@@ -207,6 +208,18 @@ with col3:
                 unsafe_allow_html=True)
 
 c01, c02, c03, c04, c05 = st.columns([1, 2, 2, 2, 1])
+
+st.title(
+    "Check out players stats [link](https://public.tableau.com/shared/DWDC2BYDK?:display_count=n&:origin=viz_share_link"
+    "=en-US&publish=yes&:display_count=n&:origin=viz_share_link"
+    "&:display_count=n&:origin=viz_share_link)")
+
+# url = 'https://www.streamlit.io/'
+#
+# with col3:
+#     if st.button('Open browser'):
+#         webbrowser.open_new_tab(url)
+
 with c01:
     st.image(left, use_column_width=True)
 
