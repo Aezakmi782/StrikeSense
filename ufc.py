@@ -232,7 +232,7 @@ with c05:
 
 col1, col2, col3 = st.columns([0.69, 0.2, 0.5])
 
-url = 'https://www.streamlit.io/'
+url = 'https://public.tableau.com/views/StrikeSense/StrikeSenseStatsOverView?:language=en-US&:display_count=n&:origin=viz_share_link'
 
 if col2.button('Player Stats'):
     webbrowser.open_new_tab(url)
