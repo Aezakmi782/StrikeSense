@@ -215,7 +215,6 @@ c01, c02, c03, c04, c05 = st.columns([1, 2, 2, 2, 1])
 #     "&:display_count=n&:origin=viz_share_link)")
 
 
-
 with c01:
     st.image(left, use_column_width=True)
 
@@ -232,7 +231,26 @@ with c05:
 
 col1, col2, col3 = st.columns([0.69, 0.2, 0.5])
 
-url = 'https://public.tableau.com/views/StrikeSense/StrikeSenseStatsOverView?:language=en-US&:display_count=n&:origin=viz_share_link'
+with col2:
+    url = """ <style>
+    a:link, a:visited {
+      background-color: rgb(14, 17, 23);
+      color: white;
+      padding: 8px 18px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 10px;
+    }
 
-if col2.button('Player Stats'):
-    webbrowser.open_new_tab(url)
+    a:hover, a:active {
+      color: red;
+      border-color: red;
+      }
+    </style>
+
+    <a href="https://public.tableau.com/views/StrikeSense/StrikeSenseStatsOverView?:language=en-US&:display_count=n&:origin' \
+      '=viz_share_link" target="_blank">Players Stats</a>
+    """
+
+    st.markdown(url, unsafe_allow_html=True)
