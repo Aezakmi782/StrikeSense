@@ -249,8 +249,7 @@ with col2:
       }
     </style>
 
-    <a href="https://public.tableau.com/views/StrikeSense/StrikeSenseStatsOverView?:language=en-US&:display_count=n&:origin' \
-      '=viz_share_link" target="_blank">Players Stats</a>
+    <a href="https://public.tableau.com/app/profile/vishal.rohila/viz/StrikeSense_16886442232640/StrikeSenseStatsOverView?publish=yes">Players Stats</a>
     """
 
     st.markdown(url, unsafe_allow_html=True)
