@@ -199,26 +199,22 @@ def btn_click():
                      unsafe_allow_html=True)
 
 
-col1, col2, col3 = st.columns((0.75, 1, 2))
+col1, col2, col3 = st.columns((1, 1, 2))
 
 # predict button
 with col3:
     predict_btn = st.button("Predict", on_click=btn_click)
-    st.markdown('<style> .css-1n543e5{ background-color: red; padding: 1rem 4rem; color:white;} </style>',
+    st.markdown('<style> .css-1n543e5{ background-color: red; padding: 1rem 3rem; color:white;} </style>',
                 unsafe_allow_html=True)
 
 c01, c02, c03, c04, c05 = st.columns([1, 2, 2, 2, 1])
 
-st.title(
-    "Check out players stats [link](https://public.tableau.com/shared/DWDC2BYDK?:display_count=n&:origin=viz_share_link"
-    "=en-US&publish=yes&:display_count=n&:origin=viz_share_link"
-    "&:display_count=n&:origin=viz_share_link)")
+# st.title(
+#     "Check out players stats [link](https://public.tableau.com/shared/DWDC2BYDK?:display_count=n&:origin=viz_share_link"
+#     "=en-US&publish=yes&:display_count=n&:origin=viz_share_link"
+#     "&:display_count=n&:origin=viz_share_link)")
 
-# url = 'https://www.streamlit.io/'
-#
-# with col3:
-#     if st.button('Open browser'):
-#         webbrowser.open_new_tab(url)
+
 
 with c01:
     st.image(left, use_column_width=True)
@@ -234,4 +230,9 @@ with c04:
 with c05:
     st.image(right, use_column_width=True)
 
-col1, col2, col3 = st.columns([0.5, 0.2, 0.5])
+col1, col2, col3 = st.columns([0.69, 0.2, 0.5])
+
+url = 'https://www.streamlit.io/'
+
+if col2.button('Player Stats'):
+    webbrowser.open_new_tab(url)
